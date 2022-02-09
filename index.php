@@ -1,6 +1,8 @@
 <?php
+include 'ISport.inc';
 include 'sport.php';
 include 'sportRelais.php';
+
 
 echo "projet heritage et interface <br>";
 $listSport=new Sport("Football", 11);
