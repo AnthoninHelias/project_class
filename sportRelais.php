@@ -1,6 +1,6 @@
 <?php
 
-class SportRelais extends sport
+class sportRelais extends sport
 {
     private  $distance;
 
