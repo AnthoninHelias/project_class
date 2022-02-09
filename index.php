@@ -1,8 +1,10 @@
 <?php
 include 'ISport.inc';
+include 'comparable.inc';
 include 'sport.php';
 include 'sportRelais.php';
 include 'sportBallon.inc';
+include 'club.php';
 // ici l'extension sportBallon a été override pour devenir .php
 
 echo "projet heritage et interface <br>";
