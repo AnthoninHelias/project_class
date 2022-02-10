@@ -33,3 +33,24 @@ foreach($listSport as $keyListSport => $valueListSport)
 {
     echo $valueListSport->getNomSport().'  '.$valueListSport->getDescription().'<br>';
 }
+$listClub[]=new club(455,'St_Etienne',777);
+$listClub[]=new club(789,'PSG',776);
+$listClub[]=new club(666,'OM',666);
+$listClub[]=new club(5,'Menton',500);
+$listClub[]=new club(1,'Carentan',1500);
+$listclub[]=new Club(2, 'Pointou-Charante', 542);
+$listclub[]=new Club(3, 'Perpignant', 500);
+
+$listclub[1]->AjouterSports(new Sport( "Football", 11));
+
+$listclub[2]->AjouterSports(new SportRelais( "DiDaDou 100m", 1, 100));
+$listclub[2]->AjouterSports(new SportRelais( "DiDaDou 300m", 1, 300));
+
+$listclub[3]->AjouterSports(new SportBallon( "Handball", 8, 20,10));
+$listclub[3]->AjouterSports(new SportBallon( "Basket", 6, 20, 30));
+$listclub[3]->AjouterSports(new SportRelais("Tire a l'arc", 3,150));
+
+foreach($listClub as $keyListSport => $valueListClub)
+{
+    echo $valueListSport->getNomSport().'  '.$valueListSport->getDescription().'<br>';
+}
