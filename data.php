@@ -8,11 +8,13 @@ $club[3] = new Club(3, "Bordeaux", 555);
 
 // Les sports de ST Etienne
 $sb = new SportBallon("Basketball", 5, 35, 45);
-$sportRelais1 = new SportRelais("3 * 400", 1, 1500);
+$sportRelais1 = new SportRelais("3 * 400", 1, 1200);
 $sportRelais4 = new SportRelais("500m", 1, 100);
+$sportRelais5 = new SportRelais("3 * 300", 1, 900);
 $club[1]->AjouterSport($sb);
 $club[1]->AjouterSport($sportRelais1);
 $club[1]->AjouterSport($sportRelais4);
+$club[1]->AjouterSport($sportRelais5);
 
 // Les sports de Paris
 $sport1 = new Sport("Karate", 1);
