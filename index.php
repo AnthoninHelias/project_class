@@ -7,6 +7,11 @@ include 'SportBallon.php';
 include 'Club.php';
 include 'data.php';
 
+$connect = new PDO('mysql:host=127.0.0.1;dbname=gestionclub',username:'root',password:'');
+foreach($connect->query('select * from club')as $row)
+{
+    print_r($row);
+}
 
 echo '<h1>Liste des clubs: </h1> <a href="index.php"></a><br>';
 foreach($club as $keyclub =>$valueClub)
