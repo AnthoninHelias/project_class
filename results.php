@@ -1,23 +1,25 @@
 <?php
 include 'Comparable.php';
 include 'ISport.php';
-include 'Club.php';
-include 'sport.php';
-include 'SportBallon.php';
+include 'Sport.php';
 include 'SportRelais.php';
-include "data.php";
-echo '<a href="index.php">Accueil</a>';
+include 'SportBallon.php';
+include 'Club.php';
+include 'data.php';
 
-if (isset($_GET['id']) || isset($_POST['IdClub'])){
-    if (isset($_GET['id'])){
-        $idClub = $_GET['id'];
+
+
+if(isset($_GET['id']) || isset($_POST["id"]) ) {
+    if(isset($_GET["id"])){
+        $idClub=$_GET["id"];
+    } else {
+        $idClub=$_POST["id"];
     }
-    else{
-        $idClub = $_POST['IdClub'];
-    }
-    echo '<h2>Liste des sports de '.$club[$idClub]->getNomClub().'</h2>';
+
+    echo '<h2>Liste des sport de ' . $club[$idClub]->getNomClub() . '</h2>';
     $sp1 = $club[$idClub]->getLesSports();
-    foreach ($sp1 as $keySp1 => $valueSp1){
+    foreach ($sp1 as $keySp1 => $valueSp1) {
         echo $valueSp1->getDescription();
     }
 }
+echo "<br> <a href='index.php'>RETOUR</a>";
