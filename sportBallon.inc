@@ -1,16 +1,27 @@
 <?php
-// ici l'extension a été override pour devenir .php
-class sportBallon extends sport
+
+class SportBallon extends Sport
 {
-    private $largeur;
-    private $longeur;
+    private int $longueur;
+    private int $largeur;
 
-
-    public function __construct(string $nomSport,int $nbJoueurs, int $largeur,int $longeur)
+    /**
+     * @param int $longueur
+     * @param int $largeur
+     */
+    public function __construct(string $nomSport, int $nbJoueurs, int $longueur, int $largeur)
     {
-        parent::__construct($nomSport,$nbJoueurs);
+        parent::__construct($nomSport, $nbJoueurs);
+        $this->longueur = $longueur;
         $this->largeur = $largeur;
-        $this->longeur = $longeur;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLongueur(): int
+    {
+        return $this->longueur;
     }
 
     /**
@@ -21,17 +32,12 @@ class sportBallon extends sport
         return $this->largeur;
     }
 
-    /**
-     * @return int
-     */
-    public function getLongeur(): int
-    {
-        return $this->longeur;
-    }
     public function getDescription(): string
     {
-        return 'Description : nom du sport :  '.$this->nomSport.'   Nombre de joueurs :  '.$this->nbJoueurs.'   Largeur :  '.$this->largeur.'  Longueur :  '.$this->longeur.'<br>';
+        return '<br>Description :<br>Nom du sport : '.$this->nomSport.
+            '<br>Nombre de joueurs : '.$this->nbJoueurs.
+            ' joueurs <br>Longueur : '.$this->longueur.' m'.
+            '<br>Largeur : '.$this->largeur.' m<br>';
     }
-
 
 }

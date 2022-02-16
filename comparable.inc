@@ -1,7 +1,6 @@
 <?php
 
-interface comparable
+interface Comparable
 {
-
-    public function compareTo(club $club);
+    public function compareTo(Club $unClub);
 }

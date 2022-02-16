@@ -1,6 +1,6 @@
 <?php
 
-class sport implements ISport
+class Sport implements ISport
 {
     protected $nomSport;
     protected $nbJoueurs;
@@ -9,7 +9,7 @@ class sport implements ISport
      * @param $nomSport
      * @param $nbJoueurs
      */
-    public function __construct(string $nomSport,int $nbJoueurs)
+    public function __construct(string $nomSport, int $nbJoueurs)
     {
         $this->nomSport = $nomSport;
         $this->nbJoueurs = $nbJoueurs;
@@ -23,8 +23,18 @@ class sport implements ISport
         return $this->nomSport;
     }
 
-    public function getDescription():string
+    /**
+     * @return int
+     */
+    public function getNbJoueurs(): int
     {
-        return 'Description : nom du sport :  '.$this->nomSport.'   Nombre de joueurs :  '.$this->nbJoueurs.'<br>';
+        return $this->nbJoueurs;
     }
+
+    public function getDescription(): string
+    {
+        return '<br>Description :<br>Nom du sport : '.$this->nomSport.
+            '<br>Nombre de joueurs : '.$this->nbJoueurs.' joueurs<br>';
+    }
+
 }

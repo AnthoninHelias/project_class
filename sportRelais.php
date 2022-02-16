@@ -1,25 +1,30 @@
 <?php
 
-class sportRelais extends sport
+class SportRelais extends Sport
 {
-    private  $distance;
+    private int $distance;
 
-
-    public function __construct(string $nomSport,int $nbJoueurs,int $distance)
+    /**
+     * @param int $distance
+     */
+    public function __construct(string $unNom, int $nbJoueur, int $distance )
     {
-        parent::__construct($nomSport,$nbJoueurs);
+        parent::__construct($unNom, $nbJoueur);
         $this->distance = $distance;
     }
 
-
-    public function getDistance()
+    /**
+     * @return mixed
+     */
+    public function getDistance(): int
     {
         return $this->distance;
     }
 
     public function getDescription(): string
     {
-        return 'Description : nom du sport :  '.$this->nomSport.'   Nombre de joueurs :  '.$this->nbJoueurs.'   Distance :  '.$this->distance.'<br>';
+        return '<br>Description :<br>Nom du sport : '.$this->nomSport.
+            '<br>Nombre de joueurs : '.$this->nbJoueurs.
+            ' joueur <br> Distance :'.$this->distance.' m<br>';
     }
-
 }
